@@ -1,3 +1,5 @@
+// GFG
+
 class Solution
 {
     public:
@@ -30,4 +32,45 @@ class Solution
         }
         return ans;
     } 
+};
+
+
+// Leetcode
+
+class Solution {
+public:
+    string reverseWords(string s) {
+        string ans="";
+        stack<string>st;
+
+        for(int i=0;i<s.size();i++){
+            char ch=s[i];
+
+            if(ch==' '){
+                if(ans!=""){
+                    st.push(ans);
+                }
+               ans="";
+            }
+            else{
+                ans+=ch;
+            }
+        }
+
+        // for the last word
+        if(ans!=""){
+            st.push(ans);
+        }
+
+        string res="";
+
+        while(!st.empty()){
+            res+=(st.top()+" "); // to give space b/w words
+            st.pop();
+        }
+
+        // to remove last space inserted after the last word
+        res.pop_back();
+        return res;
+    }
 };
