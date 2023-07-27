@@ -21,4 +21,4 @@
 - Step 17: Tries
 - Step 18: Strings (Hard que)
 
-(<a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/">Strivers SDE Sheet</a>)
+(<a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/">Strivers DSA Sheet</a>)
