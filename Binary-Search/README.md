@@ -19,5 +19,3 @@
 - Minimum days to make M boqueues
 - Find the smallest divisor
 - Search in a 2d matrix
-
-- 
