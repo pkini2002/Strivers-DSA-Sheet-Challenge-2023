@@ -1,0 +1,31 @@
+class Solution {
+public:
+    vector<int> asteroidCollision(vector<int>& asteroids) {
+        vector<int>res; // To store the final ans
+        for(int i:asteroids){
+            // If it is greater than 0 then push it into the vector
+            if(i>0){
+                res.push_back(i);
+            }
+            else{
+        // If it is negative then if the previous ele was +ve the smaller one will collide
+        // Check to see if vector is empty and the last element is greater than 0
+        // and -5 ie; complement of i/c num if it is greater than last then pop the last ele
+                while(!res.empty() && res.back()>0 && -i>res.back()){
+                    res.pop_back();
+                }
+
+                // If the last element is also negative then just push it into vector
+                if(res.empty() || res.back()<0){
+                    res.push_back(i);
+                }
+
+                // if last element is same as i/c ele with opp sign pop it
+                else if(-i == res.back()){
+                    res.pop_back();
+                }
+            }
+        }
+        return res;
+    }
+};
